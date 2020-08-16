@@ -10,7 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List(0..<10) { _ in
+                LectureRow()
+                    .padding(.horizontal, -13)
+                    .padding(.vertical, -8)
+            }
+            .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
+            
+        }
     }
 }
 

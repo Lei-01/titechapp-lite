@@ -13,6 +13,8 @@
 		0B4A59CA24E8F9080065B016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A59C924E8F9080065B016 /* Assets.xcassets */; };
 		0B4A59CD24E8F9080065B016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A59CC24E8F9080065B016 /* Preview Assets.xcassets */; };
 		0B4A59D024E8F9080065B016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A59CE24E8F9080065B016 /* LaunchScreen.storyboard */; };
+		0B4A59DA24E9014C0065B016 /* LectureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A59D924E9014C0065B016 /* LectureRow.swift */; };
+		0B4A59DE24E907870065B016 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A59DD24E907870065B016 /* Lecture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0B4A59CC24E8F9080065B016 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B4A59CF24E8F9080065B016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4A59D124E8F9080065B016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B4A59D924E9014C0065B016 /* LectureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRow.swift; sourceTree = "<group>"; };
+		0B4A59DD24E907870065B016 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,12 @@
 			children = (
 				0B4A59C324E8F9060065B016 /* AppDelegate.swift */,
 				0B4A59C524E8F9060065B016 /* SceneDelegate.swift */,
-				0B4A59C724E8F9060065B016 /* ContentView.swift */,
+				0B4A59D824E901130065B016 /* View */,
 				0B4A59C924E8F9080065B016 /* Assets.xcassets */,
 				0B4A59CE24E8F9080065B016 /* LaunchScreen.storyboard */,
 				0B4A59D124E8F9080065B016 /* Info.plist */,
 				0B4A59CB24E8F9080065B016 /* Preview Content */,
+				0B4A59DD24E907870065B016 /* Lecture.swift */,
 			);
 			path = TitechAppLite;
 			sourceTree = "<group>";
@@ -73,6 +78,15 @@
 				0B4A59CC24E8F9080065B016 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B4A59D824E901130065B016 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B4A59C724E8F9060065B016 /* ContentView.swift */,
+				0B4A59D924E9014C0065B016 /* LectureRow.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B4A59DE24E907870065B016 /* Lecture.swift in Sources */,
 				0B4A59C424E8F9060065B016 /* AppDelegate.swift in Sources */,
 				0B4A59C624E8F9060065B016 /* SceneDelegate.swift in Sources */,
 				0B4A59C824E8F9060065B016 /* ContentView.swift in Sources */,
+				0B4A59DA24E9014C0065B016 /* LectureRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
