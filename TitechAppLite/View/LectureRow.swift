@@ -9,18 +9,6 @@
 import SwiftUI
 
 struct LectureRow: View {
-//    let lecturedate: Lecturedate
-//    var body: some View {
-//        HStack {
-//            Rectangle()
-//                .fill(Color.gray)
-//                .frame(width: 5, height: 55)
-//            Text(lecturedate.name)
-//            Spacer()
-//            
-//        }
-//    }
-//    let lecture: Lecture
     var body: some View {
         HStack(spacing: 0) {
             Rectangle()
@@ -38,7 +26,7 @@ struct LectureRow: View {
             .padding(.horizontal, 15)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("電気的モデリングとシミュレーション hogehoge")
+                Text("電気的モデリングとシミュレーション")
                     .font(Font.system(size: 15))
                     .lineLimit(1)
                     .foregroundColor(Color("textmain"))
@@ -49,6 +37,7 @@ struct LectureRow: View {
             }
             .padding(.vertical, 20)
             .padding(.horizontal, 15)
+            Spacer()
             Text("W833, G114")
                 .lineLimit(2)
                 .font(Font.system(size: 14))
