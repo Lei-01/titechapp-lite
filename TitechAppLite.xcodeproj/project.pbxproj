@@ -14,6 +14,7 @@
 		0B4A59CD24E8F9080065B016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A59CC24E8F9080065B016 /* Preview Assets.xcassets */; };
 		0B4A59D024E8F9080065B016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A59CE24E8F9080065B016 /* LaunchScreen.storyboard */; };
 		0B4A59DA24E9014C0065B016 /* LectureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A59D924E9014C0065B016 /* LectureRow.swift */; };
+		0BF071BE24F2518200CD4BCB /* LectureHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF071BD24F2518200CD4BCB /* LectureHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0B4A59CF24E8F9080065B016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4A59D124E8F9080065B016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B4A59D924E9014C0065B016 /* LectureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRow.swift; sourceTree = "<group>"; };
+		0BF071BD24F2518200CD4BCB /* LectureHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				0B4A59C724E8F9060065B016 /* ContentView.swift */,
 				0B4A59D924E9014C0065B016 /* LectureRow.swift */,
+				0BF071BD24F2518200CD4BCB /* LectureHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				0B4A59C424E8F9060065B016 /* AppDelegate.swift in Sources */,
 				0B4A59C624E8F9060065B016 /* SceneDelegate.swift in Sources */,
 				0B4A59C824E8F9060065B016 /* ContentView.swift in Sources */,
+				0BF071BE24F2518200CD4BCB /* LectureHeader.swift in Sources */,
 				0B4A59DA24E9014C0065B016 /* LectureRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
