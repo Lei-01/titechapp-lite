@@ -11,10 +11,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            List(0..<10) { _ in
-                LectureRow()
-                    .padding(.horizontal, -13)
-                    .padding(.vertical, -8)
+            List {
+                ForEach(0..<10) { _ in
+                    Section(header: LectureHeader()) {
+                        ForEach(0..<2) { _ in
+                            LectureRow()
+                        }
+                    }
+                    .listRowInsets(EdgeInsets())
+                }
             }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
             
