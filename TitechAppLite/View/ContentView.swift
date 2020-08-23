@@ -18,7 +18,7 @@ struct ContentView: View {
                             LectureRow()
                         }
                     }
-                .listRowInsets(EdgeInsets())
+                    .listRowInsets(EdgeInsets())
                 }
             }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
