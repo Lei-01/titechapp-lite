@@ -13,9 +13,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(0..<10) { _ in
-                    Section(header: LectureHeader()) {
-                        ForEach(self.viewModel.lectures) { lecture in
+                ForEach(self.viewModel.dates) { date in
+                    Section(header: LectureHeader(date: date)) {
+                        ForEach(date.lectures) { lecture in
                             LectureRow(lecture: lecture)
                         }
                     }

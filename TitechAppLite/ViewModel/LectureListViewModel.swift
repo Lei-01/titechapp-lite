@@ -10,12 +10,17 @@ import Foundation
 import Combine
 
 class LectureListViewModel: ObservableObject {
-    @Published var lectures = [Lecture]()
+    @Published var dates = [DateGroupLectures]()
     private var cancellable: AnyCancellable!
     func appear() {
-        lectures = [
-            Lecture(id: 1, name: "微分積分学第一・演習", starttime: "08:50", finishtime: "10:30", explain: "ガイダンス", place: "zoom"),
-            Lecture(id: 2, name: "微分積分学第一・演習", starttime: "08:50", finishtime: "10:30", explain: "ガイダンス", place: "zoom")
+        dates = [
+            DateGroupLectures(id: 0830, month: 8, day: 30, dayWeek: "日曜日", lectures: [
+                Lecture(id: 1, name: "微分積分学第一・演習", startTime: "08:50", finishTime: "10:30", explain: "ガイダンス", place: "zoom")
+            ]),
+            DateGroupLectures(id: 0902, month: 9, day: 2, dayWeek: "水曜日", lectures: [
+                Lecture(id: 1, name: "微分積分学第一・演習", startTime: "08:50", finishTime: "10:30", explain: "ガイダンス", place: "zoom"),
+                Lecture(id: 2, name: "微分積分学第一・演習", startTime: "08:50", finishTime: "10:30", explain: "ガイダンス", place: "zoom")
+            ])
         ]
 //        cancellable = APIClient()
 //            .tryMap {

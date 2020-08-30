@@ -16,10 +16,10 @@ struct LectureRow: View {
                 .foregroundColor(Color("main"))
                 .frame(width: 5)
             VStack(alignment: .leading, spacing: 20) {
-                Text(lecture.starttime)
+                Text(lecture.startTime)
                     .foregroundColor(Color("textmain"))
                     .font(Font.system(size: 13))
-                Text(lecture.finishtime)
+                Text(lecture.finishTime)
                     .foregroundColor(Color("textsub"))
                     .font(Font.system(size: 13))
             }
@@ -54,8 +54,8 @@ struct LectureRow_Previews: PreviewProvider {
             LectureRow(lecture: Lecture(
                 id: 1,
                 name: "微分積分学第一・演習",
-                starttime: "08:50",
-                finishtime: "10:30",
+                startTime: "08:50",
+                finishTime: "10:30",
                 explain: "ガイダンス",
                 place: "zoom"
             ))

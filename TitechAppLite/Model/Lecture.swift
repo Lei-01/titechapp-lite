@@ -11,8 +11,16 @@ import Foundation
 struct Lecture: Decodable, Identifiable {
     let id: Int
     let name: String
-    let starttime: String
-    let finishtime: String
+    let startTime: String
+    let finishTime: String
     let explain: String
     let place: String
 }
+
+//struct DateGroupLectures: Decodable, Identifiable {
+//    let id: Int
+//    let month: Int
+//    let day: Int
+//    let dayweek: String
+//    let lectures: [Lecture]
+//}

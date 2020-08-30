@@ -17,6 +17,7 @@
 		0B93637224FB872800C09E9C /* LectureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637124FB872800C09E9C /* LectureListViewModel.swift */; };
 		0B93637524FB89A500C09E9C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637424FB89A500C09E9C /* APIClient.swift */; };
 		0B93637824FB8B1C00C09E9C /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637724FB8B1C00C09E9C /* Lecture.swift */; };
+		0B93637A24FBA19600C09E9C /* DateGroupLectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637924FBA19600C09E9C /* DateGroupLectures.swift */; };
 		0BF071BE24F2518200CD4BCB /* LectureHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF071BD24F2518200CD4BCB /* LectureHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		0B93637124FB872800C09E9C /* LectureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListViewModel.swift; sourceTree = "<group>"; };
 		0B93637424FB89A500C09E9C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0B93637724FB8B1C00C09E9C /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		0B93637924FBA19600C09E9C /* DateGroupLectures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGroupLectures.swift; sourceTree = "<group>"; };
 		0BF071BD24F2518200CD4BCB /* LectureHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0B93637724FB8B1C00C09E9C /* Lecture.swift */,
+				0B93637924FBA19600C09E9C /* DateGroupLectures.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				0B4A59C424E8F9060065B016 /* AppDelegate.swift in Sources */,
 				0B93637524FB89A500C09E9C /* APIClient.swift in Sources */,
 				0B4A59C624E8F9060065B016 /* SceneDelegate.swift in Sources */,
+				0B93637A24FBA19600C09E9C /* DateGroupLectures.swift in Sources */,
 				0B4A59C824E8F9060065B016 /* ContentView.swift in Sources */,
 				0B93637824FB8B1C00C09E9C /* Lecture.swift in Sources */,
 				0BF071BE24F2518200CD4BCB /* LectureHeader.swift in Sources */,
