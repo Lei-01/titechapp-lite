@@ -15,9 +15,8 @@ struct APIClient {
         session = URLSession.shared
     }
     func fetch(url: URL) -> AnyPublisher<Data, URLError> {
-        let request = URLRequest(url: url, cachePolicy: .reloadRevalidatingCacheData, timeoutInterval: 10)
-        return session
-            .dataTaskPublisher(for: request)
+        session
+            .dataTaskPublisher(for: url)
             .map { $0.data }
             .eraseToAnyPublisher()
     }

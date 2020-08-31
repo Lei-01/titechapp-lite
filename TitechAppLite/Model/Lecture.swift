@@ -16,11 +16,3 @@ struct Lecture: Decodable, Identifiable {
     let explain: String
     let place: String
 }
-
-//struct DateGroupLectures: Decodable, Identifiable {
-//    let id: Int
-//    let month: Int
-//    let day: Int
-//    let dayweek: String
-//    let lectures: [Lecture]
-//}

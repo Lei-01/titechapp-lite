@@ -22,19 +22,5 @@ class LectureListViewModel: ObservableObject {
                 Lecture(id: 2, name: "微分積分学第一・演習", startTime: "08:50", finishTime: "10:30", explain: "ガイダンス", place: "zoom")
             ])
         ]
-//        cancellable = APIClient()
-//            .tryMap {
-//                try JSONDecoder().decode([Lecture].self, from: $0)
-//            }
-//        .receive(on: DispatchQueue.main)
-//        .sink(
-//            receiveCompletion: {
-//                result in
-//            },
-//            receiveValue: {
-//                lectures in
-//                self.lectures = lectures
-//            }
-//        )
     }
 }
