@@ -9,13 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = LectureListViewModel()
     var body: some View {
         NavigationView {
             List {
-                ForEach(0..<10) { _ in
-                    Section(header: LectureHeader()) {
-                        ForEach(0..<2) { _ in
-                            LectureRow()
+                ForEach(self.viewModel.dates) { date in
+                    Section(header: LectureHeader(date: date)) {
+                        ForEach(date.lectures) { lecture in
+                            LectureRow(lecture: lecture)
                         }
                     }
                     .listRowInsets(EdgeInsets())
@@ -23,6 +24,9 @@ struct ContentView: View {
             }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
             
+        }
+        .onAppear {
+            self.viewModel.appear()
         }
     }
 }
@@ -32,3 +36,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
