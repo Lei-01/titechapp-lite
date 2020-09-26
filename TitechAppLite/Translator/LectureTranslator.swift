@@ -20,7 +20,8 @@ struct LectureTranslator {
             let finishTime = dateFormatter2.string(from: lecture.finishDate)
             
             if let l = result[lecture.startDate.beginningOfDay()] {
-                result[lecture.startDate.beginningOfDay()]! += [Lecture(id: lecture.id, name: lecture.name, startTime: startTime, finishTime: finishTime, explain: lecture.explain, place: lecture.place)]
+                let newLectures = l + [Lecture(id: lecture.id, name: lecture.name, startTime: startTime, finishTime: finishTime, explain: lecture.explain, place: lecture.place)]
+                result[lecture.startDate.beginningOfDay()] = newLectures
             } else {
                 
                 result[lecture.startDate.beginningOfDay()] = [Lecture(id: lecture.id, name: lecture.name, startTime: startTime, finishTime: finishTime, explain: lecture.explain, place: lecture.place)]
