@@ -9,9 +9,7 @@
 import Foundation
 
 struct DateGroupLectures: Decodable, Identifiable {
-    let id: Int
-    let month: Int
-    let day: Int
-    let dayWeek: String
+    let id: String
+    let day: String
     let lectures: [Lecture]
 }
