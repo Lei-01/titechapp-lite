@@ -40,12 +40,6 @@ struct IcalResponseParser {
             guard let finishDate = dateFormatter.date(from: finishTime) else {
                 continue
             }
-//            let dateFormatter2 = DateFormatter()
-//            dateFormatter2.locale = Locale(identifier: "en_US_POSIX")
-//            dateFormatter2.timeZone = TimeZone(identifier: "Asia/Tokyo")
-//            dateFormatter2.dateFormat = "HH:mm"
-//            let startTime2 = dateFormatter2.string(from: startDate)
-//            let finishTime2 = dateFormatter2.string(from: finishDate)
             
             result += [IcalLecture(id: id, name: name, startDate: startDate, finishDate: finishDate, explain: explain, place: place)]
             

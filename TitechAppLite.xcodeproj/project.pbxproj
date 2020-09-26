@@ -14,10 +14,13 @@
 		0B4A59CD24E8F9080065B016 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A59CC24E8F9080065B016 /* Preview Assets.xcassets */; };
 		0B4A59D024E8F9080065B016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B4A59CE24E8F9080065B016 /* LaunchScreen.storyboard */; };
 		0B4A59DA24E9014C0065B016 /* LectureRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A59D924E9014C0065B016 /* LectureRow.swift */; };
+		0B76939E2504BB1A0096228F /* IcalResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B76939D2504BB1A0096228F /* IcalResponseParser.swift */; };
 		0B93637224FB872800C09E9C /* LectureListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637124FB872800C09E9C /* LectureListViewModel.swift */; };
 		0B93637524FB89A500C09E9C /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637424FB89A500C09E9C /* APIClient.swift */; };
 		0B93637824FB8B1C00C09E9C /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637724FB8B1C00C09E9C /* Lecture.swift */; };
 		0B93637A24FBA19600C09E9C /* DateGroupLectures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B93637924FBA19600C09E9C /* DateGroupLectures.swift */; };
+		0BD327EA251F034F003972DF /* LectureTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD327E9251F034F003972DF /* LectureTranslator.swift */; };
+		0BD327EE251F0583003972DF /* IcalLecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD327ED251F0583003972DF /* IcalLecture.swift */; };
 		0BF071BE24F2518200CD4BCB /* LectureHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF071BD24F2518200CD4BCB /* LectureHeader.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,10 +34,13 @@
 		0B4A59CF24E8F9080065B016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B4A59D124E8F9080065B016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B4A59D924E9014C0065B016 /* LectureRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureRow.swift; sourceTree = "<group>"; };
+		0B76939D2504BB1A0096228F /* IcalResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcalResponseParser.swift; sourceTree = "<group>"; };
 		0B93637124FB872800C09E9C /* LectureListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureListViewModel.swift; sourceTree = "<group>"; };
 		0B93637424FB89A500C09E9C /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0B93637724FB8B1C00C09E9C /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		0B93637924FBA19600C09E9C /* DateGroupLectures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateGroupLectures.swift; sourceTree = "<group>"; };
+		0BD327E9251F034F003972DF /* LectureTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureTranslator.swift; sourceTree = "<group>"; };
+		0BD327ED251F0583003972DF /* IcalLecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IcalLecture.swift; sourceTree = "<group>"; };
 		0BF071BD24F2518200CD4BCB /* LectureHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +74,8 @@
 		0B4A59C224E8F9060065B016 /* TitechAppLite */ = {
 			isa = PBXGroup;
 			children = (
+				0BD327E8251F030F003972DF /* Translator */,
+				0B76939C2504BAE70096228F /* ResponseParser */,
 				0B93637624FB8B0800C09E9C /* Model */,
 				0B93637324FB898C00C09E9C /* APIClient */,
 				0B93637024FB870E00C09E9C /* ViewModel */,
@@ -100,6 +108,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0B76939C2504BAE70096228F /* ResponseParser */ = {
+			isa = PBXGroup;
+			children = (
+				0B76939D2504BB1A0096228F /* IcalResponseParser.swift */,
+			);
+			path = ResponseParser;
+			sourceTree = "<group>";
+		};
 		0B93637024FB870E00C09E9C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +137,17 @@
 			children = (
 				0B93637724FB8B1C00C09E9C /* Lecture.swift */,
 				0B93637924FBA19600C09E9C /* DateGroupLectures.swift */,
+				0BD327ED251F0583003972DF /* IcalLecture.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0BD327E8251F030F003972DF /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				0BD327E9251F034F003972DF /* LectureTranslator.swift */,
+			);
+			path = Translator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,11 +223,14 @@
 			files = (
 				0B4A59C424E8F9060065B016 /* AppDelegate.swift in Sources */,
 				0B93637524FB89A500C09E9C /* APIClient.swift in Sources */,
+				0BD327EA251F034F003972DF /* LectureTranslator.swift in Sources */,
 				0B4A59C624E8F9060065B016 /* SceneDelegate.swift in Sources */,
 				0B93637A24FBA19600C09E9C /* DateGroupLectures.swift in Sources */,
+				0B76939E2504BB1A0096228F /* IcalResponseParser.swift in Sources */,
 				0B4A59C824E8F9060065B016 /* ContentView.swift in Sources */,
 				0B93637824FB8B1C00C09E9C /* Lecture.swift in Sources */,
 				0BF071BE24F2518200CD4BCB /* LectureHeader.swift in Sources */,
+				0BD327EE251F0583003972DF /* IcalLecture.swift in Sources */,
 				0B4A59DA24E9014C0065B016 /* LectureRow.swift in Sources */,
 				0B93637224FB872800C09E9C /* LectureListViewModel.swift in Sources */,
 			);
