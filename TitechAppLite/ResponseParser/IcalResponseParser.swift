@@ -11,15 +11,14 @@ import Foundation
 struct IcalResponseParser {
     static func parse(data: Data) -> [IcalLecture] {
         let icalString = String(data: data, encoding: .utf8) ?? ""
-        print(icalString)
         let setLectures = icalString.components(separatedBy: "\nBEGIN:VEVENT")
-        print(setLectures)
         var result: [IcalLecture] = []
         for setLecture in setLectures {
             let lines = setLecture.components(separatedBy: "\n")
-            print(setLecture)
-            print("")
             if lines[0] == "BEGIN:VCALENDAR" {
+                continue
+            }
+            if lines.count < 8 {
                 continue
             }
             
