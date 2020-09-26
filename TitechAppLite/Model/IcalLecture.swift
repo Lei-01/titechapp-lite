@@ -1,18 +1,18 @@
 //
-//  Lecture.swift
+//  IcalLecture.swift
 //  TitechAppLite
 //
-//  Created by 柳田 涼華 on 2020/08/30.
+//  Created by 柳田 涼華 on 2020/09/26.
 //  Copyright © 2020 Lei. All rights reserved.
 //
 
 import Foundation
 
-struct Lecture: Decodable, Identifiable {
+struct IcalLecture: Decodable, Identifiable {
     let id: String
     let name: String
-    let startTime: String
-    let finishTime: String
+    let startDate: Date
+    let finishDate: Date
     let explain: String
     let place: String
 }

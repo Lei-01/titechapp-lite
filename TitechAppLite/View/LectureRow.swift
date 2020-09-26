@@ -52,7 +52,7 @@ struct LectureRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             LectureRow(lecture: Lecture(
-                id: 1,
+                id: "1",
                 name: "微分積分学第一・演習",
                 startTime: "08:50",
                 finishTime: "10:30",
