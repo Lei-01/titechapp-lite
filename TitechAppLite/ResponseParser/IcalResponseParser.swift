@@ -22,12 +22,35 @@ struct IcalResponseParser {
                 continue
             }
             
-            let id = lines[7].replacingOccurrences(of: "UID:", with: "")
-            let name = lines[6].replacingOccurrences(of: "SUMMARY:", with: "")
-            let startTime = lines[2].replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
-            let finishTime = lines[3].replacingOccurrences(of: "DTEND;TZID=Asia/Tokyo:", with: "")
-            let explain = lines[5].replacingOccurrences(of: "DESCRIPTION:", with: "")
-            let place = lines[4].replacingOccurrences(of: "LOCATION:", with: "")
+            var id: String = ""
+            var name: String = ""
+            var startTime: String = ""
+            var finishTime: String = ""
+            var explain: String = ""
+            var place: String = ""
+            
+            for i in 0...lines.count {
+                if lines[i].hasPrefix("UID") {
+                    id = lines[i].replacingOccurrences(of: "UID:", with: "")
+                } else if lines[i].hasPrefix("SUMMARY") {
+                    name = lines[i].replacingOccurrences(of: "SUMMARY:", with: "")
+                } else if lines[i].hasPrefix("DTSTART") {
+                    startTime = lines[i].replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
+                } else if lines[i].hasPrefix("DTEND") {
+                    finishTime = lines[i].replacingOccurrences(of: "DTEND;TZID=Asia/Tokyo:", with: "")
+                } else if lines[i].hasPrefix("DESCRIPTION") {
+                    explain = lines[i].replacingOccurrences(of: "DESCRIPTION:", with: "")
+                } else if lines[i].hasPrefix("LOCATION") {
+                    place = lines[i].replacingOccurrences(of: "LOCATION:", with: "")
+                }
+            }
+            
+//            let id = lines[7].replacingOccurrences(of: "UID:", with: "")
+//            let name = lines[6].replacingOccurrences(of: "SUMMARY:", with: "")
+//            let startTime = lines[2].replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
+//            let finishTime = lines[3].replacingOccurrences(of: "DTEND;TZID=Asia/Tokyo:", with: "")
+//            let explain = lines[5].replacingOccurrences(of: "DESCRIPTION:", with: "")
+//            let place = lines[4].replacingOccurrences(of: "LOCATION:", with: "")
             
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en_US_POSIX")
