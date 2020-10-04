@@ -22,12 +22,30 @@ struct IcalResponseParser {
                 continue
             }
             
-            let id = lines[7].replacingOccurrences(of: "UID:", with: "")
-            let name = lines[6].replacingOccurrences(of: "SUMMARY:", with: "")
-            let startTime = lines[2].replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
-            let finishTime = lines[3].replacingOccurrences(of: "DTEND;TZID=Asia/Tokyo:", with: "")
-            let explain = lines[5].replacingOccurrences(of: "DESCRIPTION:", with: "")
-            let place = lines[4].replacingOccurrences(of: "LOCATION:", with: "")
+            var tmpId: String?
+            var tmpName: String?
+            var startTime: String = ""
+            var finishTime: String = ""
+            var explain: String = ""
+            var place: String = ""
+            
+            for line in lines {
+                tmpId = nil
+                tmpName = nil
+                if line.hasPrefix("UID") {
+                    tmpId = line.replacingOccurrences(of: "UID:", with: "")
+                } else if line.hasPrefix("SUMMARY") {
+                    tmpName = line.replacingOccurrences(of: "SUMMARY:", with: "")
+                } else if line.hasPrefix("DTSTART") {
+                    startTime = line.replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
+                } else if line.hasPrefix("DTEND") {
+                    finishTime = line.replacingOccurrences(of: "DTEND;TZID=Asia/Tokyo:", with: "")
+                } else if line.hasPrefix("DESCRIPTION") {
+                    explain = line.replacingOccurrences(of: "DESCRIPTION:", with: "")
+                } else if line.hasPrefix("LOCATION") {
+                    place = line.replacingOccurrences(of: "LOCATION:", with: "")
+                }
+            }
             
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -37,6 +55,12 @@ struct IcalResponseParser {
                 continue
             }
             guard let finishDate = dateFormatter.date(from: finishTime) else {
+                continue
+            }
+            guard let id = tmpId else {
+                continue
+            }
+            guard let name = tmpName else {
                 continue
             }
             
