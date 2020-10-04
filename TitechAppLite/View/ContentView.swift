@@ -22,6 +22,14 @@ struct ContentView: View {
                     .listRowInsets(EdgeInsets())
                 }
             }
+            .toolbar {
+                ToolbarItem {
+                    Button(action: {
+                    }) {
+                        Text("設定")
+                    }
+                }
+            }
             .navigationBarTitle(Text("スケジュール"), displayMode: .inline)
             
         }
