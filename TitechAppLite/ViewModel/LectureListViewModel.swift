@@ -14,7 +14,7 @@ class LectureListViewModel: ObservableObject {
     private var cancellable: AnyCancellable!
     func appear() {
         cancellable = APIClient()
-        .fetch(url: URL(string: "https://secure.ocw.titech.ac.jp/ocwi/index.php?module=Ocwi&action=Webcal&iCalendarId=5656d103401d73301a3fa5375b4fc2eb38929fa1")!)
+        .fetch(url: URL(string: "https://ocwi-mock.titech.app/ocwi/index.php?module=Ocwi&action=Webcal&iCalendarId=test")!)
             .map{IcalResponseParser.parse(data: $0)}
             .receive(on: DispatchQueue.main)
             .sink(
