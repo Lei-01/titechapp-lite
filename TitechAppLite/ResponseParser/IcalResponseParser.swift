@@ -22,18 +22,20 @@ struct IcalResponseParser {
                 continue
             }
             
-            var id: String = ""
-            var name: String = ""
+            var tmpId: String?
+            var tmpName: String?
             var startTime: String = ""
             var finishTime: String = ""
             var explain: String = ""
             var place: String = ""
             
             for line in lines {
+                tmpId = nil
+                tmpName = nil
                 if line.hasPrefix("UID") {
-                    id = line.replacingOccurrences(of: "UID:", with: "")
+                    tmpId = line.replacingOccurrences(of: "UID:", with: "")
                 } else if line.hasPrefix("SUMMARY") {
-                    name = line.replacingOccurrences(of: "SUMMARY:", with: "")
+                    tmpName = line.replacingOccurrences(of: "SUMMARY:", with: "")
                 } else if line.hasPrefix("DTSTART") {
                     startTime = line.replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
                 } else if line.hasPrefix("DTEND") {
@@ -53,6 +55,12 @@ struct IcalResponseParser {
                 continue
             }
             guard let finishDate = dateFormatter.date(from: finishTime) else {
+                continue
+            }
+            guard let id = tmpId else {
+                continue
+            }
+            guard let name = tmpName else {
                 continue
             }
             
