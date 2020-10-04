@@ -29,19 +29,19 @@ struct IcalResponseParser {
             var explain: String = ""
             var place: String = ""
             
-            for i in 0...lines.count-1 {
-                if lines[i].hasPrefix("UID") {
-                    id = lines[i].replacingOccurrences(of: "UID:", with: "")
-                } else if lines[i].hasPrefix("SUMMARY") {
-                    name = lines[i].replacingOccurrences(of: "SUMMARY:", with: "")
-                } else if lines[i].hasPrefix("DTSTART") {
-                    startTime = lines[i].replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
-                } else if lines[i].hasPrefix("DTEND") {
-                    finishTime = lines[i].replacingOccurrences(of: "DTEND;TZID=Asia/Tokyo:", with: "")
-                } else if lines[i].hasPrefix("DESCRIPTION") {
-                    explain = lines[i].replacingOccurrences(of: "DESCRIPTION:", with: "")
-                } else if lines[i].hasPrefix("LOCATION") {
-                    place = lines[i].replacingOccurrences(of: "LOCATION:", with: "")
+            for line in lines {
+                if line.hasPrefix("UID") {
+                    id = line.replacingOccurrences(of: "UID:", with: "")
+                } else if line.hasPrefix("SUMMARY") {
+                    name = line.replacingOccurrences(of: "SUMMARY:", with: "")
+                } else if line.hasPrefix("DTSTART") {
+                    startTime = line.replacingOccurrences(of: "DTSTART;TZID=Asia/Tokyo:", with: "")
+                } else if line.hasPrefix("DTEND") {
+                    finishTime = line.replacingOccurrences(of: "DTEND;TZID=Asia/Tokyo:", with: "")
+                } else if line.hasPrefix("DESCRIPTION") {
+                    explain = line.replacingOccurrences(of: "DESCRIPTION:", with: "")
+                } else if line.hasPrefix("LOCATION") {
+                    place = line.replacingOccurrences(of: "LOCATION:", with: "")
                 }
             }
             
